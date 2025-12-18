@@ -1,7 +1,6 @@
-// Tableau pour stocker l'historique
+// Tab pour stocker l'historique
 let history = [];
 
-// Récupération des éléments du DOM
 const form = document.getElementById("calcForm");
 const errorMsg = document.getElementById("errorMsg");
 const historyList = document.getElementById("historyList");
@@ -17,7 +16,7 @@ function calculate(a, b, op) {
     }
 }
 
-// Gestion du submit
+
 form.addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -46,7 +45,7 @@ form.addEventListener("submit", function(e){
     const record = `${numA} ${operation} ${numB} = ${result}`;
     history.push(record);
 
-    // Mise à jour du DOM
+
     renderHistory();
 });
 
